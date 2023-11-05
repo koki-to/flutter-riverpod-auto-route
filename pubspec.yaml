@@ -10,6 +10,8 @@ dependencies:
   auto_route: ^7.8.4
   collection: ^1.17.2
   cupertino_icons: ^1.0.2
+  firebase_auth: ^4.12.1
+  firebase_auth_mocks: ^0.13.0
   flutter:
     sdk: flutter
   flutter_riverpod: ^2.4.5

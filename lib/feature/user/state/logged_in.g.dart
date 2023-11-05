@@ -1,24 +1,24 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'router.dart';
+part of 'logged_in.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$appRouterHash() => r'd3719e9a8ef0d2d6ceac9bacd1e02e0597fa9491';
+String _$loggedInHash() => r'e16f16ed5532fb1b838d66f6e6cf6213dc161b51';
 
-/// See also [appRouter].
-@ProviderFor(appRouter)
-final appRouterProvider = AutoDisposeProvider<Raw<AppRouter>>.internal(
-  appRouter,
-  name: r'appRouterProvider',
+/// See also [loggedIn].
+@ProviderFor(loggedIn)
+final loggedInProvider = AutoDisposeProvider<bool>.internal(
+  loggedIn,
+  name: r'loggedInProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$appRouterHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$loggedInHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef AppRouterRef = AutoDisposeProviderRef<Raw<AppRouter>>;
+typedef LoggedInRef = AutoDisposeProviderRef<bool>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
