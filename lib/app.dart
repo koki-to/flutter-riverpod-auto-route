@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'feature/user/ui/login_page.dart';
 import 'router/router.dart';
 
 class App extends ConsumerWidget {

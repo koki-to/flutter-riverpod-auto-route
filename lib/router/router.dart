@@ -2,7 +2,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../data_source/mock_firebase/auth.dart';
 import '../feature/home/ui/home_page.dart';
 import '../feature/home/ui/not_found_page.dart';
 import '../feature/user/state/logged_in.dart';
@@ -27,8 +26,8 @@ class AppRouter extends _$AppRouter implements AutoRouteGuard {
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) {
     final routeName = resolver.route.name;
-    logger.i('onNavigation(): routeName = $routeName');
     final loggedIn = ref.read(loggedInProvider);
+    logger.i('onNavigation(): loggedIn = $loggedIn, routeName = $routeName');
     if (loggedIn) {
       resolver.next();
     } else if (routeName == LoginRoute.name) {

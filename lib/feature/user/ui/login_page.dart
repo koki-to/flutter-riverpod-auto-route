@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../home/ui/home_page.dart';
+import 'comporent/login_button.dart';
 
 @RoutePage()
 class LoginPage extends StatelessWidget {
@@ -8,17 +8,12 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
-        child: FilledButton(
-          onPressed: () async {
-            await Navigator.of(context).push(
-              MaterialPageRoute<void>(
-                builder: (BuildContext context) => const HomePage(),
-              ),
-            );
-          },
-          child: const Text('ログイン'),
+        child: SizedBox(
+          height: 50,
+          width: 160,
+          child: LoginButton(),
         ),
       ),
     );
