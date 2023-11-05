@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../use_case/login.dart';
+import '../../use_case/logout.dart';
 
-class LoginButton extends ConsumerWidget {
-  const LoginButton({super.key});
+class LogoutButton extends ConsumerWidget {
+  const LogoutButton({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final useCaseState = ref.watch(loginUseCaseProvider);
+    final useCaseState = ref.watch(logoutUseCaseProvider);
 
     return useCaseState.isLoading
         ? const FilledButton(
@@ -22,8 +22,8 @@ class LoginButton extends ConsumerWidget {
           )
         : FilledButton(
             onPressed: () async =>
-                ref.read(loginUseCaseProvider.notifier).invoke(),
-            child: const Text('ログイン'),
+                ref.read(logoutUseCaseProvider.notifier).invoke(),
+            child: const Text('ログアウト'),
           );
   }
 }

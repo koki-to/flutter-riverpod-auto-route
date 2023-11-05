@@ -2,12 +2,11 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../data_source/mock_firebase/auth.dart';
 import '../../../router/router.dart';
-import '../../../util/logger.dart';
 
-part 'login.g.dart';
+part 'logout.g.dart';
 
 @riverpod
-class LoginUseCase extends _$LoginUseCase {
+class LogoutUseCase extends _$LogoutUseCase {
   @override
   FutureOr<void> build() {}
 
@@ -19,10 +18,7 @@ class LoginUseCase extends _$LoginUseCase {
     state = await AsyncValue.guard(() async {
       await Future<void>.delayed(const Duration(seconds: 3));
       final auth = ref.read(firebaseAuthProvider);
-      final credential = await auth.signInAnonymously();
-      final user = credential.user;
-      assert(user != null);
-      logger.i(user);
+      await auth.signOut();
       ref.invalidate(appRouterProvider);
     });
   }

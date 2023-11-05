@@ -33,6 +33,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const NotFoundPage(),
       );
     },
+    SettingsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const SettingsPage(),
+      );
+    },
   };
 }
 
@@ -74,6 +80,20 @@ class NotFoundRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'NotFoundRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SettingsPage]
+class SettingsRoute extends PageRouteInfo<void> {
+  const SettingsRoute({List<PageRouteInfo>? children})
+      : super(
+          SettingsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SettingsRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
